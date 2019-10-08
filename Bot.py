@@ -51,10 +51,10 @@ class Client(discord.Client):
                     tokenized = nltk.word_tokenize(original_content)
                     nouns = [word for (word, pos) in nltk.pos_tag(tokenized) if pos[:2] == 'NN']
 
-                    new_content = ''
+                    new_content = original_content
 
                     for noun in nouns:
-                        new_content = original_content.replace(noun, random.choice(timmy_aliases))
+                        new_content = new_content.replace(noun, random.choice(timmy_aliases))
 
                     response_message += "> " + new_content
                     response_message += "\n\nHere's the original: \n> " + original_content
