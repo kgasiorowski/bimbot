@@ -5,7 +5,7 @@ import nltk
 import re
 
 timmy_aliases = ['timmy', ' bimmy', 'bimopher', 'timothy', 'bimothy', 'bim', 'tim']
-timmy_regex = r'((^|\s)(T|t|B|b)im)((($|\s|\W$))|((othy)|(opher)|(my)|(bot)))'
+timmy_regex = r'((:bigbim:)|((^|\s)(T|t|B|b)im)((($|\s|\W$))|((othy)|(opher)|(my)|(bot))))'
 
 
 class Client(discord.Client):
